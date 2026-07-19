@@ -1,5 +1,7 @@
 import { describe, expect, it, vi } from 'vitest';
 
+process.env.JWT_SECRET = 'test-secret';
+
 vi.mock('jsonwebtoken', () => ({ default: { sign: vi.fn(() => 'signed-token') } }));
 import jwt from 'jsonwebtoken';
 import { buildUserProfile, signToken } from '../../services/authService.js';
