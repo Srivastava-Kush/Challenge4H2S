@@ -13,7 +13,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/stadiumiq';
+const MONGO_URI = process.env.MONGO_URI;
 
 // ─── Security Hardening (OWASP Top 10) ───────────────────────────────────────
 // A05: Security Misconfiguration - Enforce secure HTTP headers

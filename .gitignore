@@ -12,6 +12,20 @@ dist
 dist-ssr
 *.local
 
+.env
+
+.env.*
+
+test-results/*
+.agents/*
+
+node_modules/*
+
+PROJECT_STANDARDS.md
+README.md 
+
+
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
