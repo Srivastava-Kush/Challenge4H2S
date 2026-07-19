@@ -1,5 +1,6 @@
 import admin from 'firebase-admin';
 
+
 let app;
 
 try {
@@ -17,3 +18,5 @@ try {
 }
 
 export const adminAuth = app ? admin.auth() : null;
+
+
