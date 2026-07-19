@@ -4,6 +4,7 @@ vi.mock('../../models/GraphNode.js', () => ({ default: { find: vi.fn() } }));
 vi.mock('../../models/GraphEdge.js', () => ({ default: { find: vi.fn() } }));
 vi.mock('../../models/CrowdTelemetry.js', () => ({ default: { findOne: vi.fn() } }));
 vi.mock('../../models/Stadium.js', () => ({ default: { findOne: vi.fn() } }));
+vi.mock('mongoose', () => ({ default: { connection: { readyState: 1 } } }));
 import GraphNode from '../../models/GraphNode.js';
 import GraphEdge from '../../models/GraphEdge.js';
 import CrowdTelemetry from '../../models/CrowdTelemetry.js';

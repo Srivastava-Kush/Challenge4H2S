@@ -87,7 +87,7 @@ Error: expect(received).toEqual(expected) // deep equality
       - img [ref=e7]
       - generic [ref=e9]: MetLife Stadium
       - generic [ref=e10]: Fan App
-      - generic "Connected to telemetry server"
+      - generic "Running locally"
     - navigation "Main Navigation" [ref=e11]:
       - button "Navigate" [ref=e12] [cursor=pointer]:
         - img [ref=e13]
@@ -112,7 +112,7 @@ Error: expect(received).toEqual(expected) // deep equality
           - option "French"
           - option "Portuguese"
       - button "Login / Sign up" [ref=e37] [cursor=pointer]
-      - text: Seed 2026|12:35:30 AM
+      - text: Seed 2026|12:00:00 AM
   - main [ref=e38]:
     - region "Multilingual Concierge" [ref=e40]:
       - generic [ref=e41]:

@@ -79,7 +79,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<div class=\"stat-chip\" title=\"Average crowd density\"><span class=\"stat-chip-dot\" style=\"background: rgb(217, 119, 6);\"></span><span class=\"stat-chip-label\">Crowd</span><span class=\"stat-chip-value\" style=\"color: rgb(217, 119, 6);\">Moderate</span></div>",
++                 "html": "<div class=\"stat-chip\" title=\"Average crowd density\"><span class=\"stat-chip-dot\" style=\"background: rgb(16, 185, 129);\"></span><span class=\"stat-chip-label\">Crowd</span><span class=\"stat-chip-value\" style=\"color: rgb(16, 185, 129);\">Low</span></div>",
 +                 "target": Array [
 +                   "div[title=\"Average crowd density\"]",
 +                 ],
@@ -715,7 +715,7 @@ Error: expect(received).toEqual(expected) // deep equality
       - img [ref=e7]
       - generic [ref=e9]: MetLife Stadium
       - generic [ref=e10]: Fan App
-      - generic "Connected to telemetry server"
+      - generic "Running locally"
     - navigation "Main Navigation" [ref=e11]:
       - button "Navigate" [pressed] [ref=e12] [cursor=pointer]:
         - img [ref=e13]
@@ -740,17 +740,17 @@ Error: expect(received).toEqual(expected) // deep equality
           - option "French"
           - option "Portuguese"
       - button "Login / Sign up" [ref=e37] [cursor=pointer]
-      - text: Seed 2026|12:35:30 AM
+      - text: Seed 2026|12:00:00 AM
   - main [ref=e38]:
     - region "Fan Portal" [ref=e39]:
       - generic [ref=e40]:
         - generic "Average crowd density" [ref=e41]:
           - generic [ref=e43]: Crowd
-          - generic [ref=e44]: Moderate
+          - generic [ref=e44]: Low
         - generic "Active alerts" [ref=e45]:
           - img [ref=e46]
           - generic [ref=e49]: Alerts
-          - generic [ref=e50]: "1"
+          - generic [ref=e50]: "0"
         - generic "Route distance" [ref=e51]:
           - img [ref=e52]
           - generic [ref=e55]: Distance
@@ -758,7 +758,7 @@ Error: expect(received).toEqual(expected) // deep equality
         - generic "Estimated walk time" [ref=e57]:
           - img [ref=e58]
           - generic [ref=e61]: ETA
-          - generic [ref=e62]: 0.3 min
+          - generic [ref=e62]: 0.2 min
       - article "Find My Way" [ref=e63]:
         - heading "Find My Way" [level=2] [ref=e65]:
           - img [ref=e66]
@@ -820,64 +820,63 @@ Error: expect(received).toEqual(expected) // deep equality
                 - text: 10m
               - generic [ref=e127]:
                 - img [ref=e128]
-                - text: ~0.3 min
+                - text: ~0.2 min
               - generic [ref=e131]: 2 waypoints
-              - generic [ref=e132]: ⚠️ Rerouted (crowd)
-            - generic [ref=e133]:
-              - generic [ref=e134]:
-                - img [ref=e135]
+            - generic [ref=e132]:
+              - generic [ref=e133]:
+                - img [ref=e134]
                 - text: Walking time
-              - generic [ref=e140]: 0.3 min
-          - generic [ref=e141]:
-            - generic [ref=e142]:
-              - generic [ref=e144]: 📍
-              - generic [ref=e146]:
-                - generic [ref=e147]: Start at MetLife Gate
-                - generic [ref=e149]: Ground Floor
-            - generic [ref=e150]:
-              - generic [ref=e152]: 🏁
-              - generic [ref=e153]:
-                - generic [ref=e154]: Arrived at South Concourse
-                - generic [ref=e156]: Ground Floor
-    - generic [ref=e157]:
-      - generic [ref=e158]:
-        - button "Zoom In" [ref=e159] [cursor=pointer]:
-          - img [ref=e160]
-        - button "Zoom Out" [ref=e163] [cursor=pointer]:
-          - img [ref=e164]
-        - button "Reset View" [ref=e167] [cursor=pointer]:
-          - img [ref=e168]
-      - img [ref=e171]:
-        - generic [ref=e187]:
-          - generic [ref=e189]: 51%
-          - generic [ref=e191]: 86%
-          - generic [ref=e193]: 68%
-          - generic [ref=e195]: 28%
-        - generic [ref=e203] [cursor=pointer]:
+              - generic [ref=e139]: 0.2 min
+          - generic [ref=e140]:
+            - generic [ref=e141]:
+              - generic [ref=e143]: 📍
+              - generic [ref=e145]:
+                - generic [ref=e146]: Start at MetLife Gate
+                - generic [ref=e148]: Ground Floor
+            - generic [ref=e149]:
+              - generic [ref=e151]: 🏁
+              - generic [ref=e152]:
+                - generic [ref=e153]: Arrived at South Concourse
+                - generic [ref=e155]: Ground Floor
+    - generic [ref=e156]:
+      - generic [ref=e157]:
+        - button "Zoom In" [ref=e158] [cursor=pointer]:
+          - img [ref=e159]
+        - button "Zoom Out" [ref=e162] [cursor=pointer]:
+          - img [ref=e163]
+        - button "Reset View" [ref=e166] [cursor=pointer]:
+          - img [ref=e167]
+      - img [ref=e170]:
+        - generic [ref=e186]:
+          - generic [ref=e188]: 0%
+          - generic [ref=e190]: 0%
+          - generic [ref=e192]: 25%
+          - generic [ref=e194]: 0%
+        - generic [ref=e202] [cursor=pointer]:
           - generic: M
           - generic:
             - generic: 📍 YOU ARE HERE
-        - generic [ref=e213]:
-          - generic [ref=e215]: FLOOR LEVELS
-          - generic [ref=e218]: Ground (Gates)
-          - generic [ref=e221]: Level 1 (100s)
-          - generic [ref=e224]: Level 2 (200s)
-          - generic [ref=e227]: Level 3 (300s)
-      - generic [ref=e228]:
-        - generic [ref=e229]: Crowd Capacity
-        - generic [ref=e230]:
-          - generic [ref=e231]: 0-39%
-          - generic [ref=e232]: 40-59%
-          - generic [ref=e233]: 60-79%
-          - generic [ref=e234]: 80-89%
-          - generic [ref=e235]: 90%+
-  - contentinfo [ref=e236]:
-    - generic [ref=e237]:
+        - generic [ref=e212]:
+          - generic [ref=e214]: FLOOR LEVELS
+          - generic [ref=e217]: Ground (Gates)
+          - generic [ref=e220]: Level 1 (100s)
+          - generic [ref=e223]: Level 2 (200s)
+          - generic [ref=e226]: Level 3 (300s)
+      - generic [ref=e227]:
+        - generic [ref=e228]: Crowd Capacity
+        - generic [ref=e229]:
+          - generic [ref=e230]: 0-39%
+          - generic [ref=e231]: 40-59%
+          - generic [ref=e232]: 60-79%
+          - generic [ref=e233]: 80-89%
+          - generic [ref=e234]: 90%+
+  - contentinfo [ref=e235]:
+    - generic [ref=e236]:
       - text: "📍 Model venue:"
-      - strong [ref=e238]: MetLife Stadium
+      - strong [ref=e237]: MetLife Stadium
       - text: (Lusail Generic Architecture)
-    - button "Play demo scenario" [ref=e240] [cursor=pointer]:
-      - img [ref=e241]
+    - button "Play demo scenario" [ref=e239] [cursor=pointer]:
+      - img [ref=e240]
       - text: Play demo scenario
 ```
 

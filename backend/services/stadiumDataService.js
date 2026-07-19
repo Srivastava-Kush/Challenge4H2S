@@ -1,3 +1,4 @@
+import mongoose from 'mongoose';
 import GraphNode from '../models/GraphNode.js';
 import GraphEdge from '../models/GraphEdge.js';
 import CrowdTelemetry from '../models/CrowdTelemetry.js';
@@ -40,6 +41,16 @@ export function normalizeCrowd(crowd) {
 }
 
 export async function getMapData() {
+  if (mongoose.connection.readyState !== 1) {
+    // Return empty fallback data immediately instead of buffering for 10 seconds
+    return {
+      stadium: { name: 'Stadium (Offline Mode)' },
+      nodes: [],
+      edges: [],
+      crowd: emptyCrowd(),
+    };
+  }
+
   const [nodes, edges, crowd, stadium] = await Promise.all([
     GraphNode.find().lean(),
     GraphEdge.find().lean(),
