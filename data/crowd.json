@@ -1,0 +1,126 @@
+{
+    "timestamp": "2026-07-17T16:50:00Z",
+    "nodes": {
+        "gate_metlife": {
+            "density": 42,
+            "status": "low"
+        },
+        "gate_verizon": {
+            "density": 78,
+            "status": "high"
+        },
+        "gate_pepsi": {
+            "density": 35,
+            "status": "low"
+        },
+        "gate_budlight": {
+            "density": 55,
+            "status": "medium"
+        },
+        "corridor_south": {
+            "density": 68,
+            "status": "medium"
+        },
+        "corridor_east": {
+            "density": 86,
+            "status": "high"
+        },
+        "corridor_west": {
+            "density": 28,
+            "status": "low"
+        },
+        "corridor_north": {
+            "density": 51,
+            "status": "medium"
+        },
+        "section_124": {
+            "density": 31,
+            "status": "low"
+        },
+        "section_140": {
+            "density": 47,
+            "status": "medium"
+        },
+        "section_208": {
+            "density": 64,
+            "status": "medium"
+        },
+        "section_313": {
+            "density": 22,
+            "status": "low"
+        },
+        "restroom_1": {
+            "density": 59,
+            "status": "medium"
+        },
+        "food_1": {
+            "density": 73,
+            "status": "high"
+        },
+        "medical_1": {
+            "density": 14,
+            "status": "low"
+        },
+        "prayer_1": {
+            "density": 26,
+            "status": "low"
+        },
+        "lift_1": {
+            "density": 18,
+            "status": "low"
+        }
+    },
+    "edges": {
+        "gate_metlife_corridor_south": {
+            "density": 40
+        },
+        "gate_verizon_corridor_east": {
+            "density": 88
+        },
+        "gate_pepsi_corridor_west": {
+            "density": 24
+        },
+        "gate_budlight_corridor_north": {
+            "density": 52
+        },
+        "corridor_south_corridor_east": {
+            "density": 67
+        },
+        "corridor_east_corridor_north": {
+            "density": 72
+        },
+        "corridor_north_corridor_west": {
+            "density": 33
+        },
+        "corridor_west_corridor_south": {
+            "density": 29
+        },
+        "corridor_east_section_124": {
+            "density": 81
+        },
+        "corridor_south_section_140": {
+            "density": 39
+        },
+        "corridor_north_section_313": {
+            "density": 18
+        },
+        "corridor_east_section_208": {
+            "density": 56
+        },
+        "corridor_south_restroom_1": {
+            "density": 61
+        },
+        "corridor_south_food_1": {
+            "density": 79
+        },
+        "corridor_west_medical_1": {
+            "density": 16
+        },
+        "corridor_east_prayer_1": {
+            "density": 23
+        },
+        "corridor_south_lift_1": {
+            "density": 11
+        }
+    }
+}

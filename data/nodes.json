@@ -1,0 +1,155 @@
+[
+    {
+        "id": "gate_metlife",
+        "name": "MetLife Gate",
+        "type": "gate",
+        "level": "ground",
+        "x": 600,
+        "y": 1010,
+        "accessible": true
+    },
+    {
+        "id": "gate_verizon",
+        "name": "Verizon Gate",
+        "type": "gate",
+        "level": "ground",
+        "x": 1010,
+        "y": 810,
+        "accessible": true
+    },
+    {
+        "id": "gate_pepsi",
+        "name": "Pepsi Gate",
+        "type": "gate",
+        "level": "ground",
+        "x": 220,
+        "y": 810,
+        "accessible": true
+    },
+    {
+        "id": "gate_budlight",
+        "name": "Bud Light Gate",
+        "type": "gate",
+        "level": "ground",
+        "x": 600,
+        "y": 110,
+        "accessible": true
+    },
+    {
+        "id": "corridor_south",
+        "name": "South Concourse",
+        "type": "corridor",
+        "level": "100",
+        "x": 600,
+        "y": 860,
+        "accessible": true
+    },
+    {
+        "id": "corridor_east",
+        "name": "East Concourse",
+        "type": "corridor",
+        "level": "100",
+        "x": 860,
+        "y": 600,
+        "accessible": true
+    },
+    {
+        "id": "corridor_west",
+        "name": "West Concourse",
+        "type": "corridor",
+        "level": "100",
+        "x": 340,
+        "y": 600,
+        "accessible": true
+    },
+    {
+        "id": "corridor_north",
+        "name": "North Concourse",
+        "type": "corridor",
+        "level": "100",
+        "x": 600,
+        "y": 340,
+        "accessible": true
+    },
+    {
+        "id": "section_124",
+        "name": "Section 124",
+        "type": "section",
+        "level": "100",
+        "x": 760,
+        "y": 600,
+        "accessible": true
+    },
+    {
+        "id": "section_140",
+        "name": "Section 140",
+        "type": "section",
+        "level": "100",
+        "x": 600,
+        "y": 760,
+        "accessible": true
+    },
+    {
+        "id": "section_208",
+        "name": "Section 208",
+        "type": "section",
+        "level": "200",
+        "x": 700,
+        "y": 500,
+        "accessible": true
+    },
+    {
+        "id": "section_313",
+        "name": "Section 313",
+        "type": "section",
+        "level": "300",
+        "x": 600,
+        "y": 200,
+        "accessible": true
+    },
+    {
+        "id": "restroom_1",
+        "name": "Restroom 1",
+        "type": "restroom",
+        "level": "100",
+        "x": 500,
+        "y": 700,
+        "accessible": true
+    },
+    {
+        "id": "food_1",
+        "name": "Food Stand 1",
+        "type": "food",
+        "level": "100",
+        "x": 760,
+        "y": 700,
+        "accessible": true
+    },
+    {
+        "id": "medical_1",
+        "name": "First Aid 1",
+        "type": "medical",
+        "level": "100",
+        "x": 380,
+        "y": 500,
+        "accessible": true
+    },
+    {
+        "id": "prayer_1",
+        "name": "Prayer Room 1",
+        "type": "prayer",
+        "level": "100",
+        "x": 650,
+        "y": 470,
+        "accessible": true
+    },
+    {
+        "id": "lift_1",
+        "name": "Lift 1",
+        "type": "lift",
+        "level": "100",
+        "x": 600,
+        "y": 650,
+        "accessible": true
+    }
+]

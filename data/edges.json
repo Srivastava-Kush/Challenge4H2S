@@ -1,0 +1,138 @@
+[
+    {
+        "from": "gate_metlife",
+        "to": "corridor_south",
+        "distance": 70,
+        "walkTime": 60,
+        "accessible": true,
+        "stairs": false
+    },
+    {
+        "from": "gate_verizon",
+        "to": "corridor_east",
+        "distance": 65,
+        "walkTime": 55,
+        "accessible": true,
+        "stairs": false
+    },
+    {
+        "from": "gate_pepsi",
+        "to": "corridor_west",
+        "distance": 65,
+        "walkTime": 55,
+        "accessible": true,
+        "stairs": false
+    },
+    {
+        "from": "gate_budlight",
+        "to": "corridor_north",
+        "distance": 65,
+        "walkTime": 55,
+        "accessible": true,
+        "stairs": false
+    },
+    {
+        "from": "corridor_south",
+        "to": "corridor_east",
+        "distance": 120,
+        "walkTime": 95,
+        "accessible": true,
+        "stairs": false
+    },
+    {
+        "from": "corridor_east",
+        "to": "corridor_north",
+        "distance": 120,
+        "walkTime": 95,
+        "accessible": true,
+        "stairs": false
+    },
+    {
+        "from": "corridor_north",
+        "to": "corridor_west",
+        "distance": 120,
+        "walkTime": 95,
+        "accessible": true,
+        "stairs": false
+    },
+    {
+        "from": "corridor_west",
+        "to": "corridor_south",
+        "distance": 120,
+        "walkTime": 95,
+        "accessible": true,
+        "stairs": false
+    },
+    {
+        "from": "corridor_east",
+        "to": "section_124",
+        "distance": 35,
+        "walkTime": 30,
+        "accessible": true,
+        "stairs": false
+    },
+    {
+        "from": "corridor_south",
+        "to": "section_140",
+        "distance": 35,
+        "walkTime": 30,
+        "accessible": true,
+        "stairs": false
+    },
+    {
+        "from": "corridor_north",
+        "to": "section_313",
+        "distance": 50,
+        "walkTime": 40,
+        "accessible": true,
+        "stairs": false
+    },
+    {
+        "from": "corridor_east",
+        "to": "section_208",
+        "distance": 45,
+        "walkTime": 35,
+        "accessible": true,
+        "stairs": false
+    },
+    {
+        "from": "corridor_south",
+        "to": "restroom_1",
+        "distance": 18,
+        "walkTime": 15,
+        "accessible": true,
+        "stairs": false
+    },
+    {
+        "from": "corridor_south",
+        "to": "food_1",
+        "distance": 22,
+        "walkTime": 18,
+        "accessible": true,
+        "stairs": false
+    },
+    {
+        "from": "corridor_west",
+        "to": "medical_1",
+        "distance": 30,
+        "walkTime": 25,
+        "accessible": true,
+        "stairs": false
+    },
+    {
+        "from": "corridor_east",
+        "to": "prayer_1",
+        "distance": 28,
+        "walkTime": 23,
+        "accessible": true,
+        "stairs": false
+    },
+    {
+        "from": "corridor_south",
+        "to": "lift_1",
+        "distance": 15,
+        "walkTime": 12,
+        "accessible": true,
+        "stairs": false
+    }
+]

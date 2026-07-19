@@ -1,0 +1,9 @@
+{
+  "restrooms": ["restroom_1"],
+  "food": ["food_1"],
+  "medical": ["medical_1"],
+  "prayer": ["prayer_1"],
+  "lifts": ["lift_1"],
+  "exits": ["gate_metlife", "gate_verizon", "gate_pepsi", "gate_budlight"],
+  "transport": ["gate_metlife", "gate_verizon"]
+}

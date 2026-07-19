@@ -1,0 +1,11 @@
+[
+  {
+    "id": "alert-1",
+    "title": "Verizon Gate at 78% capacity",
+    "description": "Verizon Gate queue is backing up. High congestion on East Concourse.",
+    "mitigation": "Acknowledge alert to reroute incoming fans through Pepsi Gate and West Concourse.",
+    "type": "warning",
+    "acknowledged": false,
+    "timestamp": "2026-07-18T18:00:00.000Z"
+  }
+]

@@ -1,0 +1,95 @@
+[
+  {
+    "id": "match-001",
+    "homeTeam": "Brazil",
+    "awayTeam": "Argentina",
+    "homeFlag": "🇧🇷",
+    "awayFlag": "🇦🇷",
+    "homeScore": 2,
+    "awayScore": 1,
+    "status": "live",
+    "minute": 67,
+    "kickoffUtc": "2026-07-17T18:00:00Z",
+    "venue": "MetLife Stadium",
+    "group": "Group C",
+    "round": "Group Stage",
+    "events": [
+      { "minute": 15, "type": "goal", "team": "home", "player": "Vinicius Jr.", "description": "Left-foot strike from inside the box" },
+      { "minute": 34, "type": "goal", "team": "away", "player": "Messi", "description": "Free kick curled into top corner" },
+      { "minute": 58, "type": "goal", "team": "home", "player": "Rodrygo", "description": "Counter-attack finish" },
+      { "minute": 62, "type": "yellow_card", "team": "away", "player": "De Paul", "description": "Reckless challenge" }
+    ]
+  },
+  {
+    "id": "match-002",
+    "homeTeam": "France",
+    "awayTeam": "Germany",
+    "homeFlag": "🇫🇷",
+    "awayFlag": "🇩🇪",
+    "homeScore": 0,
+    "awayScore": 0,
+    "status": "upcoming",
+    "minute": null,
+    "kickoffUtc": "2026-07-18T21:00:00Z",
+    "venue": "MetLife Stadium",
+    "group": "Group D",
+    "round": "Group Stage",
+    "events": []
+  },
+  {
+    "id": "match-003",
+    "homeTeam": "England",
+    "awayTeam": "Spain",
+    "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "awayFlag": "🇪🇸",
+    "homeScore": 3,
+    "awayScore": 2,
+    "status": "completed",
+    "minute": 90,
+    "kickoffUtc": "2026-07-16T18:00:00Z",
+    "venue": "MetLife Stadium",
+    "group": "Group A",
+    "round": "Group Stage",
+    "events": [
+      { "minute": 8,  "type": "goal", "team": "home", "player": "Kane", "description": "Header from corner" },
+      { "minute": 23, "type": "goal", "team": "away", "player": "Yamal", "description": "Solo run and finish" },
+      { "minute": 55, "type": "goal", "team": "home", "player": "Bellingham", "description": "Long range effort" },
+      { "minute": 70, "type": "goal", "team": "away", "player": "Morata", "description": "Penalty kick" },
+      { "minute": 88, "type": "goal", "team": "home", "player": "Saka", "description": "Clinical finish on the counter" }
+    ]
+  },
+  {
+    "id": "match-004",
+    "homeTeam": "Portugal",
+    "awayTeam": "Morocco",
+    "homeFlag": "🇵🇹",
+    "awayFlag": "🇲🇦",
+    "homeScore": 1,
+    "awayScore": 0,
+    "status": "halftime",
+    "minute": 45,
+    "kickoffUtc": "2026-07-17T15:00:00Z",
+    "venue": "MetLife Stadium",
+    "group": "Group B",
+    "round": "Group Stage",
+    "events": [
+      { "minute": 39, "type": "goal", "team": "home", "player": "Ronaldo", "description": "Penalty converted" }
+    ]
+  },
+  {
+    "id": "match-005",
+    "homeTeam": "USA",
+    "awayTeam": "Mexico",
+    "homeFlag": "🇺🇸",
+    "awayFlag": "🇲🇽",
+    "homeScore": 0,
+    "awayScore": 0,
+    "status": "upcoming",
+    "minute": null,
+    "kickoffUtc": "2026-07-19T18:00:00Z",
+    "venue": "MetLife Stadium",
+    "group": "Group E",
+    "round": "Group Stage",
+    "events": []
+  }
+]

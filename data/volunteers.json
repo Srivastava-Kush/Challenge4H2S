@@ -1,0 +1,23 @@
+[
+    {
+        "id": "vol-1",
+        "name": "Alex Johnson",
+        "role": "volunteer",
+        "status": "busy",
+        "location": "corridor_south"
+    },
+    {
+        "id": "vol-2",
+        "name": "Maria Garcia",
+        "role": "volunteer",
+        "status": "available",
+        "location": "gate_verizon"
+    },
+    {
+        "id": "vol-3",
+        "name": "David Chen",
+        "role": "volunteer",
+        "status": "available",
+        "location": "corridor_east"
+    }
+]

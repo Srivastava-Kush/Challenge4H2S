@@ -1,0 +1,20 @@
+{
+  "id": "metlife",
+  "name": "MetLife Stadium",
+  "mapImage": "/src/data/Atlanta Stadium.png",
+  "dimensions": {
+    "width": 1200,
+    "height": 1200
+  },
+  "levels": [
+    { "id": "ground", "name": "Ground Level" },
+    { "id": "100", "name": "100 Level Concourse" },
+    { "id": "200", "name": "200 Level Concourse" },
+    { "id": "300", "name": "300 Level Concourse" }
+  ],
+  "theme": {
+    "background": "#0b0f19",
+    "primary": "#0f172a",
+    "accent": "#10b981"
+  }
+}

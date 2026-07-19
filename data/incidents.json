@@ -1,0 +1,22 @@
+[
+    {
+        "id": "incident-1784398244888",
+        "category": "General",
+        "description": "Commotion",
+        "priority": "Low",
+        "location": "medical_1",
+        "assignedTo": "Alex Johnson (Volunteer)",
+        "status": "Active",
+        "timestamp": "2026-07-18T18:10:44.888Z"
+    },
+    {
+        "id": "incident-1",
+        "category": "Cleaning",
+        "description": "Slippery spill reported near the South Concourse entrance ramp.",
+        "priority": "Low",
+        "location": "corridor_south",
+        "assignedTo": "Volunteer Team B",
+        "status": "Active",
+        "timestamp": "2026-07-18T18:00:00.000Z"
+    }
+]
