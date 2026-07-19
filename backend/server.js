@@ -51,11 +51,15 @@ if (process.env.HF_TOKEN) {
 }
 
 // Initialize MongoDB and Services
-mongoose.connect(MONGO_URI)
-  .then(() => {
-    console.log('✅ MongoDB connected:', MONGO_URI);
-  })
-  .catch(err => console.warn('⚠️  MongoDB not available — auth endpoints will use fallback mode:', err.message));
+if (MONGO_URI) {
+  mongoose.connect(MONGO_URI)
+    .then(() => {
+      console.log('✅ MongoDB connected:', MONGO_URI);
+    })
+    .catch(err => console.warn('⚠️  MongoDB not available — auth endpoints will use fallback mode:', err.message));
+} else {
+  console.warn('⚠️  MONGO_URI not set — MongoDB not available (auth endpoints will use fallback mode).');
+}
 
 // Load RAG knowledge base (async — embeddings generated after DB connects)
 loadKnowledgeBase().catch(err => console.error('RAG init error:', err.message));
