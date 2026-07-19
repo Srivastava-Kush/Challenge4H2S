@@ -97,6 +97,7 @@ jobs:
         env:
           CI: "true"
           GEMINI_API_KEY: ""
+          JWT_SECRET: test-secret
 
       - name: Upload Backend Log
         if: always()
