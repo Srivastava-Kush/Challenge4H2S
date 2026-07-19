@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'stadiumiq_jwt_secret_2026_worldcup';
+const JWT_SECRET = process.env.JWT_SECRET;
 
 export function signToken(user) {
   return jwt.sign(
