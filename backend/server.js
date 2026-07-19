@@ -18,6 +18,7 @@ const MONGO_URI = process.env.MONGO_URI;
 // ─── Security Hardening (OWASP Top 10) ───────────────────────────────────────
 // A05: Security Misconfiguration - Enforce secure HTTP headers
 app.use(helmet({
+  crossOriginOpenerPolicy: { policy: "same-origin-allow-popups" },
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],

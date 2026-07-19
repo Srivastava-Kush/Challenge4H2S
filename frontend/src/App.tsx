@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Compass, ShieldAlert, RefreshCw, Shield, Utensils, Trophy, MessageSquare, ClipboardList, Languages } from 'lucide-react';
 import { findRoute } from './utils/routing';
 import type { Node, Edge, CrowdData, RouteResult } from './utils/routing';
+import type { AlertItem, IncidentItem, QueueItem } from './types';
 import { MapView } from './components/MapView';
 import { FanPortal } from './components/FanPortal';
 import { OpsPortal } from './components/OpsPortal';
@@ -47,15 +48,16 @@ function StadiumApp() {
   const [nodes, setNodes] = useState<Node[]>([]);
   const [edges, setEdges] = useState<Edge[]>([]);
   const [crowd, setCrowd] = useState<CrowdData>({ nodes: {}, edges: {} } as CrowdData);
-  const [stadium, setStadium] = useState<any>(null);
+  const [stadium, setStadium] = useState<{ name?: string; dimensions?: { width?: number; height?: number }; theme?: { background?: string } } | null>(null);
 
   // Dynamic Sim/Telemetry State
-  const [incidents, setIncidents] = useState<any[]>([]);
-  const [alerts, setAlerts] = useState<any[]>([]);
-  const [queues, setQueues] = useState<any[]>([]);
+  const [incidents, setIncidents] = useState<IncidentItem[]>([]);
+  const [alerts, setAlerts] = useState<AlertItem[]>([]);
+  const [queues, setQueues] = useState<QueueItem[]>([]);
   const [simTime, setSimTime] = useState<string>('2026-07-17T18:30:00Z');
   const [serverConnected, setServerConnected] = useState<boolean>(false);
   const [isDemoRunning, setIsDemoRunning] = useState<boolean>(false);
+
 
   // Chat/AI State
   const [chatHistory, setChatHistory] = useState<Array<{ sender: 'user' | 'bot'; text: string; isRtl?: boolean }>>([
@@ -298,7 +300,7 @@ function StadiumApp() {
       // Local Incident triage fallback
       const descLower = desc.toLowerCase();
       let category = "General";
-      let priority = "Low";
+      let priority: 'Low' | 'Medium' | 'High' = "Low";
       let assignedTo = "Steward Support";
 
       if (descLower.includes("spill") || descLower.includes("water") || descLower.includes("garbage")) {
@@ -419,6 +421,19 @@ function StadiumApp() {
 
   return (
     <div className="app-container">
+      {/* Screen-reader live region — announces route changes */}
+      <div
+        aria-live="polite"
+        aria-atomic="true"
+        className="sr-only"
+        role="status"
+      >
+        {activeRoute
+          ? `Route calculated: ${activeRoute.path.length > 0 ? activeRoute.path[0].name : ''} to ${
+              activeRoute.path.length > 0 ? activeRoute.path[activeRoute.path.length - 1].name : ''
+            }, ${activeRoute.totalDistance} metres, approximately ${parseFloat((activeRoute.totalTime / 60).toFixed(1))} minutes.`
+          : ''}
+      </div>
       {/* Dynamic Header */}
       <header className="header-bar">
         <div className="logo-container">
@@ -490,11 +505,8 @@ function StadiumApp() {
       {/* Main Content Layout */}
       <main
         className="main-content"
+        aria-label="Stadium application content"
         style={{
-          // Reverse columns dynamically:
-          // Fan: [left: controls, right: map]
-          // Ops: [left: map, right: controls]
-          // Match/Food: full width or custom
           gridTemplateColumns: activeView === 'fan' ? '400px 1fr' : activeView === 'ops' ? '1fr 440px' : '1fr'
         }}
       >

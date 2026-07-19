@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { Compass, Navigation, Search, MapPin, Bell, Clock, Footprints, ChevronRight } from 'lucide-react';
 import type { Node, RouteResult, CrowdData } from '../utils/routing';
+import type { AlertItem } from '../types';
 import { useAuth } from '../contexts/AuthContext';
 
 interface FanPortalProps {
@@ -15,7 +16,7 @@ interface FanPortalProps {
   activeRoute: RouteResult | null;
   chatHistory: Array<{ sender: 'user' | 'bot'; text: string; isRtl?: boolean; sources?: string[]; crowdWarning?: string }>;
   crowd: CrowdData;
-  alerts: any[];
+  alerts: AlertItem[];
 }
 
 // Node type → icon + emoji + color
@@ -189,12 +190,12 @@ export const FanPortal: React.FC<FanPortalProps> = ({
 
       {/* ── Live Stat Chips ── */}
       <div className="stat-chips-row">
-        <div className="stat-chip" title="Average crowd density">
+        <div className="stat-chip" role="status" aria-label={`Average crowd density: ${crowdLevel}`} title="Average crowd density">
           <span className="stat-chip-dot" style={{ background: crowdColor }} />
           <span className="stat-chip-label">Crowd</span>
           <span className="stat-chip-value" style={{ color: crowdColor }}>{crowdLevel}</span>
         </div>
-        <div className="stat-chip" title="Active alerts">
+        <div className="stat-chip" role="status" aria-label={`Active alerts: ${alerts.filter(a => !a.acknowledged).length}`} title="Active alerts">
           <Bell size={11} className="text-amber-500" />
           <span className="stat-chip-label">Alerts</span>
           <span className="stat-chip-value text-amber-400">{alerts.filter(a => !a.acknowledged).length}</span>
@@ -269,6 +270,8 @@ export const FanPortal: React.FC<FanPortalProps> = ({
                   key={action.type}
                   onClick={() => handleQuickAction(action.type)}
                   className={`quick-action-card ${isActive ? 'active' : ''}`}
+                  aria-label={`Find nearest ${action.label}`}
+                  aria-pressed={isActive}
                   style={isActive ? { borderColor: action.color, boxShadow: `0 0 16px ${action.glow}` } : {}}
                 >
                   <span className="quick-action-emoji">{action.emoji}</span>
@@ -326,6 +329,8 @@ export const FanPortal: React.FC<FanPortalProps> = ({
                     key={node.id}
                     onClick={() => { onChangeDestNode(node.id); setDestSearch(''); }}
                     className={`search-result-item ${isSelected ? 'active' : ''}`}
+                    aria-current={isSelected ? 'true' : undefined}
+                    aria-label={`Select ${node.name}, ${meta.label}, ${getFloorLabel(node.level)}`}
                   >
                     <span className="search-result-emoji">{meta.emoji}</span>
                     <div className="flex-1 text-left">

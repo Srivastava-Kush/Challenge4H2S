@@ -42,8 +42,13 @@ export interface RouteResult {
 }
 
 /**
- * Helper to retrieve crowd density for an edge.
- * Handles both key ordering (e.g. from_to or to_from).
+ * Retrieves the crowd density for a specific edge by checking both key
+ * orderings (from_to and to_from) since density is stored bidirectionally.
+ *
+ * @param fromId - The ID of the origin node.
+ * @param toId   - The ID of the destination node.
+ * @param crowd  - The live crowd telemetry data object.
+ * @returns Density as a percentage (0–100), or 0 if the edge has no data.
  */
 export function getEdgeDensity(fromId: string, toId: string, crowd: CrowdData): number {
   if (!crowd?.edges) return 0;
@@ -59,11 +64,18 @@ export function getEdgeDensity(fromId: string, toId: string, crowd: CrowdData): 
 }
 
 /**
- * Calculates edge weight multiplier based on crowd density:
- * - < 40: 1.0x
- * - 40-59: 1.5x
- * - 60-79: 3.0x
- * - >= 80: 8.0x
+ * Maps a crowd density percentage to a travel-time cost multiplier.
+ * Higher density means proportionally longer effective travel time.
+ *
+ * | Density | Multiplier | Meaning                       |
+ * |---------|-----------|-------------------------------|
+ * | < 40%   | 1.0×      | Free flow — no adjustment     |
+ * | 40–59%  | 1.5×      | Moderate crowd — slight delay |
+ * | 60–79%  | 3.0×      | Heavy crowd — significant delay |
+ * | ≥ 80%   | 8.0×      | Critical density — severe delay |
+ *
+ * @param density - Crowd density as a percentage (0–100).
+ * @returns A multiplier ≥ 1.0.
  */
 export function getCrowdMultiplier(density: number): number {
   if (density < 40) return 1.0;
@@ -73,7 +85,16 @@ export function getCrowdMultiplier(density: number): number {
 }
 
 /**
- * Dijkstra's algorithm for finding the shortest path in the stadium graph.
+ * Finds the optimal route between two nodes using Dijkstra's algorithm,
+ * with live crowd density weighting and optional accessibility filtering.
+ *
+ * @param startId         - ID of the starting node.
+ * @param endId           - ID of the destination node.
+ * @param nodes           - All stadium nodes from the database.
+ * @param edges           - All walkable edges between nodes.
+ * @param crowd           - Live crowd telemetry used to adjust path weights.
+ * @param accessibilityMode - When true, skips edges that have stairs or are not accessible.
+ * @returns A {@link RouteResult} with path, edges, distance, and time, or null if unreachable.
  */
 export function findRoute(
   startId: string,

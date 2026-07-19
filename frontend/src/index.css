@@ -68,6 +68,19 @@ body {
   min-height: 100vh;
 }
 
+/* Accessibility: visually-hidden but available to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .glass-panel {
   background: var(--bg-card);
   backdrop-filter: blur(12px);
@@ -863,6 +876,13 @@ body {
   stroke-width: 4 !important;
   stroke: #ffffff !important;
   filter: drop-shadow(0 0 12px currentColor);
+}
+
+/* Keyboard focus ring for SVG map nodes */
+.map-node:focus-visible circle {
+  stroke: #facc15 !important;
+  stroke-width: 5 !important;
+  filter: drop-shadow(0 0 10px #facc15);
 }
 
 /* Concourse Heat Overlay */

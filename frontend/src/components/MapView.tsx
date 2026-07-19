@@ -80,9 +80,9 @@ export const MapView: React.FC<MapViewProps> = ({
     >
       {/* Controls */}
       <div className="absolute top-4 right-4 z-10 flex gap-2">
-        <button onClick={handleZoomIn} className="btn-secondary p-2 rounded-lg" title="Zoom In"><ZoomIn size={16} /></button>
-        <button onClick={handleZoomOut} className="btn-secondary p-2 rounded-lg" title="Zoom Out"><ZoomOut size={16} /></button>
-        <button onClick={handleReset} className="btn-secondary p-2 rounded-lg" title="Reset View"><RotateCcw size={16} /></button>
+        <button onClick={handleZoomIn} className="btn-secondary p-2 rounded-lg" title="Zoom In" aria-label="Zoom in map"><ZoomIn size={16} aria-hidden="true" /></button>
+        <button onClick={handleZoomOut} className="btn-secondary p-2 rounded-lg" title="Zoom Out" aria-label="Zoom out map"><ZoomOut size={16} aria-hidden="true" /></button>
+        <button onClick={handleReset} className="btn-secondary p-2 rounded-lg" title="Reset View" aria-label="Reset map view"><RotateCcw size={16} aria-hidden="true" /></button>
       </div>
 
       {/* Hover Tooltip */}
@@ -103,6 +103,8 @@ export const MapView: React.FC<MapViewProps> = ({
       <svg
         viewBox={`0 0 ${mapWidth} ${mapHeight}`}
         className="map-svg"
+        role="group"
+        aria-label="Interactive stadium map. Use Tab to move between locations, Enter or Space to select."
         style={{
           transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`,
           transformOrigin: 'center center',
@@ -194,8 +196,16 @@ export const MapView: React.FC<MapViewProps> = ({
                 key={node.id}
                 className={`map-node ${isStart ? 'active start' : ''} ${isDest ? 'active dest' : ''}`}
                 onClick={() => onSelectNode(node.id)}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onSelectNode(node.id); } }}
                 onMouseEnter={() => setHoveredNode(node)}
                 onMouseLeave={() => setHoveredNode(null)}
+                onFocus={() => setHoveredNode(node)}
+                onBlur={() => setHoveredNode(null)}
+                role="button"
+                tabIndex={0}
+                aria-label={`${node.name}, ${node.type}, ${node.level === 'ground' ? 'ground floor' : `level ${node.level}`}. Crowd density: ${crowd.nodes[node.id]?.density ?? 0}%.${isStart ? ' Currently selected as your start.' : ''}${isDest ? ' Currently selected as your destination.' : ''}`}
+                aria-pressed={isStart || isDest}
+                style={{ cursor: 'pointer', outline: 'none' }}
               >
                 {/* Pulsing ring for start/dest */}
                 {(isStart || isDest) && (

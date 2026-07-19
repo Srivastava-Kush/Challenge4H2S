@@ -31,14 +31,24 @@ export const Chatbot: React.FC<ChatbotProps> = ({ chatHistory, onSendMessage, la
           World Cup Multilingual Concierge
         </h2>
         <div className="chat-container flex-1 overflow-hidden">
-          <div className="chat-messages" style={{ maxHeight: '100%', overflowY: 'auto', paddingRight: '8px' }}>
+        <div
+          className="chat-messages"
+          aria-live="polite"
+          aria-label="Conversation history"
+          role="log"
+          style={{ maxHeight: '100%', overflowY: 'auto', paddingRight: '8px' }}
+        >
             {chatHistory.map((msg, idx) => (
               <div
                 key={idx}
                 className={`chat-bubble-container ${msg.sender === 'user' ? 'user' : 'bot'} ${msg.isRtl ? 'rtl' : ''}`}
                 style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '12px' }}
               >
-                <div className={`chat-bubble ${msg.sender === 'user' ? 'user' : 'bot'} ${msg.isRtl ? 'rtl' : ''}`}>
+                <div
+                  className={`chat-bubble ${msg.sender === 'user' ? 'user' : 'bot'} ${msg.isRtl ? 'rtl' : ''}`}
+                  role={msg.sender === 'bot' ? 'status' : undefined}
+                  aria-label={msg.sender === 'bot' ? `Concierge: ${msg.text}` : `You: ${msg.text}`}
+                >
                   {msg.text}
                 </div>
                 {msg.crowdWarning && (
@@ -62,10 +72,12 @@ export const Chatbot: React.FC<ChatbotProps> = ({ chatHistory, onSendMessage, la
           <form onSubmit={handleSendChat} className="chat-input-area mt-3">
             <input
               type="text"
+              id="chat-input"
               placeholder={isRtl ? 'اسأل المساعد الرياضي...' : 'Ask Concierge (RAG grounded)...'}
               value={chatInput}
               onChange={e => setChatInput(e.target.value)}
               className="chat-input"
+              aria-label="Type your question to the stadium concierge"
             />
             <button type="submit" className="chat-send-btn" aria-label="Send Message">
               <Navigation size={16} className="rotate-90" aria-hidden="true" />
