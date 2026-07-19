@@ -13,7 +13,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Trophy, Save, Plus, Minus, CheckCircle, Loader2, AlertCircle, Zap } from 'lucide-react';
 import type { Match, MatchStatus } from '../../types';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = import.meta.env.VITE_API_BASE || '/api';
 
 const STATUS_OPTIONS: { value: MatchStatus; label: string; color: string }[] = [
   { value: 'upcoming',  label: '📅 Upcoming',  color: '#64748b' },

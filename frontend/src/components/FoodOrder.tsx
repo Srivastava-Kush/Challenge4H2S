@@ -18,7 +18,7 @@ import type { MenuItem, CartItem, FoodCategory } from '../types';
 import { initiateRazorpayPayment } from '../utils/razorpay';
 import { useAuth } from '../contexts/AuthContext';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = import.meta.env.VITE_API_BASE || '/api';
 
 const CATEGORIES: { id: 'all' | FoodCategory; label: string; emoji: string }[] = [
   { id: 'all',      label: 'All',      emoji: '🍽️' },

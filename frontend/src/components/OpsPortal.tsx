@@ -3,7 +3,7 @@ import { ShieldAlert, AlertCircle, FileText, Send, CheckCircle, ClipboardList, H
 import type { Node } from '../utils/routing';
 import { OpsScorePanel } from './ops/OpsScorePanel';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = import.meta.env.VITE_API_BASE || '/api';
 
 interface OpsQueueItem {
   gateId: string;

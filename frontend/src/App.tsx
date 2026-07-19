@@ -13,7 +13,7 @@ import { Chatbot } from './components/Chatbot';
 import { LandingPage } from './components/LandingPage';
 import { VolunteerPortal } from './components/VolunteerPortal';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = import.meta.env.VITE_API_BASE || '/api';
 const LANGUAGES = [
   { code: 'en', label: 'English' },
   { code: 'ar', label: 'Arabic' },

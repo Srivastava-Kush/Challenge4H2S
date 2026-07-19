@@ -15,7 +15,7 @@ import type { Match, MatchStatus } from '../types';
 
 // Static fallback — used if the API is unreachable
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = import.meta.env.VITE_API_BASE || '/api';
 const POLL_INTERVAL_MS = 30_000;
 
 const STATUS_LABELS: Record<MatchStatus, { label: string; color: string; icon: React.ReactNode }> = {

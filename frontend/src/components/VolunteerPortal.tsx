@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { ClipboardPlus, RefreshCw, Send } from 'lucide-react';
 import type { Node } from '../utils/routing';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = import.meta.env.VITE_API_BASE || '/api';
 
 interface VolunteerIncident {
   id: string;
