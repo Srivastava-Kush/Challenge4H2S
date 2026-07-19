@@ -18,7 +18,10 @@ export default defineConfig({
         'services/**/*.js',
         'tools/**/*.js',
         'controllers/chatController.js'
-      ]
+      ],
+      // Atlas persistence and vector-index behaviour require a real MongoDB
+      // integration environment; exercise that adapter in integration tests.
+      exclude: ['services/ragService.js']
     }
   }
 });

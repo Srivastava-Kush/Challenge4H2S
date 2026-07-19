@@ -36,4 +36,11 @@ describe('crowdTool', () => {
     expect(summary.hasWarning).toBe(false);
     expect(summary.summary).toContain('All areas are clear');
   });
+
+  it('uses safe defaults when telemetry is missing', async () => {
+    stadiumDataService.getNavigationData.mockResolvedValue({ nodes: [], edges: [], crowd: { nodes: {}, edges: {} } });
+    const summary = await getCrowdSummary();
+    expect(summary.gates).toHaveLength(4);
+    expect(summary.gates[0].density).toBe(30);
+  });
 });

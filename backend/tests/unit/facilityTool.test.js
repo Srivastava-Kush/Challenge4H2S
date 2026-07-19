@@ -47,4 +47,15 @@ describe('facilityTool', () => {
     const { facilityNode } = await getNearestFacility({ facilityType: 'food', fromNodeId: 'gate_1' });
     expect(facilityNode?.id).toBe('food_1');
   });
+
+  it('reports when a facility exists but cannot be reached', async () => {
+    stadiumDataService.getNavigationData.mockResolvedValue({
+      nodes: mockNodes,
+      edges: [],
+      crowd: { nodes: {}, edges: {} },
+    });
+    const result = await getNearestFacility({ facilityType: 'restroom', fromNodeId: 'gate_1' });
+    expect(result.result).toBeNull();
+    expect(result.formatted).toContain('Could not find a walkable route');
+  });
 });
