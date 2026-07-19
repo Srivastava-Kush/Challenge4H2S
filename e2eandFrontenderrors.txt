@@ -1,0 +1,2436 @@
+Run npm --workspace=frontend run test:e2e
+
+> frontend@0.0.0 test:e2e
+> playwright test
+
+
+Running 5 tests using 1 worker
+××F××F···
+
+  1) [chromium] › tests/a11y/axeAccessibility.spec.ts:6:3 › Accessibility (WCAG 2.2 AA) › Fan Portal has no automatically detectable violations 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -   1
+    + Received  + 686
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+    +     "help": "Elements must meet minimum color contrast ratio thresholds",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=playwright",
+    +     "id": "color-contrast",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0ea5e9",
+    +               "contrastRatio": 2.77,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#ffffff",
+    +               "fontSize": "10.5pt (14px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 2.77 (foreground color: #ffffff, background color: #0ea5e9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button class=\"view-btn active\" aria-pressed=\"true\">",
+    +                 "target": Array [
+    +                   ".view-btn.active",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 2.77 (foreground color: #ffffff, background color: #0ea5e9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<button class=\"view-btn active\" aria-pressed=\"true\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".view-btn.active",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1323",
+    +               "contrastRatio": 3.88,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"stat-chip\" title=\"Average crowd density\"><span class=\"stat-chip-dot\" style=\"background: rgb(16, 185, 129);\"></span><span class=\"stat-chip-label\">Crowd</span><span class=\"stat-chip-value\" style=\"color: rgb(16, 185, 129);\">Low</span></div>",
+    +                 "target": Array [
+    +                   "div[title=\"Average crowd density\"]",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"stat-chip-label\">Crowd</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div[title=\"Average crowd density\"] > .stat-chip-label",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1323",
+    +               "contrastRatio": 3.88,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"stat-chip\" title=\"Active alerts\">",
+    +                 "target": Array [
+    +                   "div[title=\"Active alerts\"]",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"stat-chip-label\">Alerts</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div[title=\"Active alerts\"] > .stat-chip-label",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1323",
+    +               "contrastRatio": 3.88,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"stat-chip\" title=\"Route distance\">",
+    +                 "target": Array [
+    +                   "div[title=\"Route distance\"]",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"stat-chip-label\">Distance</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div[title=\"Route distance\"] > .stat-chip-label",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1323",
+    +               "contrastRatio": 3.88,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"stat-chip\" title=\"Estimated walk time\">",
+    +                 "target": Array [
+    +                   "div[title=\"Estimated walk time\"]",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"stat-chip-label\">ETA</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div[title=\"Estimated walk time\"] > .stat-chip-label",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1321",
+    +               "contrastRatio": 3.89,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.89 (foreground color: #64748b, background color: #0d1321, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<article class=\"glass-panel flex flex-col gap-4\" aria-labelledby=\"find-my-way-title\">",
+    +                 "target": Array [
+    +                   "article",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.89 (foreground color: #64748b, background color: #0d1321, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<div class=\"switch-subtext\">Avoids stairs, prefers lifts and ramps</div>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".switch-subtext",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0e1627",
+    +               "contrastRatio": 3.79,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🚪 Gates</button>",
+    +                 "target": Array [
+    +                   ".category-tab[role=\"tab\"]:nth-child(2)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<article class=\"glass-panel flex flex-col gap-4\" aria-labelledby=\"find-my-way-title\">",
+    +                 "target": Array [
+    +                   "article",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🚪 Gates</button>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".category-tab[role=\"tab\"]:nth-child(2)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0e1627",
+    +               "contrastRatio": 3.79,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🪑 Seats</button>",
+    +                 "target": Array [
+    +                   ".category-tab[role=\"tab\"]:nth-child(3)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<article class=\"glass-panel flex flex-col gap-4\" aria-labelledby=\"find-my-way-title\">",
+    +                 "target": Array [
+    +                   "article",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🪑 Seats</button>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".category-tab[role=\"tab\"]:nth-child(3)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0e1627",
+    +               "contrastRatio": 3.79,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🏥 Facilities</button>",
+    +                 "target": Array [
+    +                   ".category-tab[role=\"tab\"]:nth-child(4)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<article class=\"glass-panel flex flex-col gap-4\" aria-labelledby=\"find-my-way-title\">",
+    +                 "target": Array [
+    +                   "article",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🏥 Facilities</button>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".category-tab[role=\"tab\"]:nth-child(4)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1c2d",
+    +               "contrastRatio": 3.61,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "7.5pt (10px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.61 (foreground color: #64748b, background color: #0d1c2d, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"route-summary-card\">",
+    +                 "target": Array [
+    +                   ".route-summary-card",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<div class=\"glass-panel\">",
+    +                 "target": Array [
+    +                   ".glass-panel:nth-child(3)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.61 (foreground color: #64748b, background color: #0d1c2d, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<div class=\"eta-bar-label\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".eta-bar-label",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#191f2c",
+    +               "contrastRatio": 3.46,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "7.5pt (10px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.46 (foreground color: #64748b, background color: #191f2c, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<span class=\"step-floor\">Ground Floor</span>",
+    +                 "target": Array [
+    +                   ".step-row:nth-child(1) > .step-content > .step-meta > .step-floor",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<div class=\"glass-panel\">",
+    +                 "target": Array [
+    +                   ".glass-panel:nth-child(3)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.46 (foreground color: #64748b, background color: #191f2c, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"step-floor\">Ground Floor</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".step-row:nth-child(1) > .step-content > .step-meta > .step-floor",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#191f2c",
+    +               "contrastRatio": 3.46,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "7.5pt (10px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.46 (foreground color: #64748b, background color: #191f2c, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<span class=\"step-floor\">Ground Floor</span>",
+    +                 "target": Array [
+    +                   ".step-row:nth-child(2) > .step-content > .step-meta > .step-floor",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<div class=\"glass-panel\">",
+    +                 "target": Array [
+    +                   ".glass-panel:nth-child(3)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.46 (foreground color: #64748b, background color: #191f2c, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"step-floor\">Ground Floor</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".step-row:nth-child(2) > .step-content > .step-meta > .step-floor",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.color",
+    +       "wcag2aa",
+    +       "wcag143",
+    +       "TTv5",
+    +       "TT13.c",
+    +       "EN-301-549",
+    +       "EN-9.1.4.3",
+    +       "ACT",
+    +       "RGAAv4",
+    +       "RGAA-3.2.1",
+    +     ],
+    +   },
+    +   Object {
+    +     "description": "Ensure select element has an accessible name",
+    +     "help": "Select element must have an accessible name",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/select-name?application=playwright",
+    +     "id": "select-name",
+    +     "impact": "critical",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "implicit-label",
+    +             "impact": "critical",
+    +             "message": "Element does not have an implicit (wrapped) <label>",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": null,
+    +             "id": "explicit-label",
+    +             "impact": "critical",
+    +             "message": "Element does not have an explicit <label>",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": null,
+    +             "id": "aria-label",
+    +             "impact": "critical",
+    +             "message": "aria-label attribute does not exist or is empty",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": null,
+    +             "id": "aria-labelledby",
+    +             "impact": "critical",
+    +             "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": Object {
+    +               "messageKey": "noAttr",
+    +             },
+    +             "id": "non-empty-title",
+    +             "impact": "critical",
+    +             "message": "Element has no title attribute",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": null,
+    +             "id": "presentational-role",
+    +             "impact": "critical",
+    +             "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element does not have an implicit (wrapped) <label>
+    +   Element does not have an explicit <label>
+    +   aria-label attribute does not exist or is empty
+    +   aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+    +   Element has no title attribute
+    +   Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+    +         "html": "<select class=\"form-select m-0\"><option value=\"gate_metlife\">MetLife Gate</option></select>",
+    +         "impact": "critical",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".form-select",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.forms",
+    +       "wcag2a",
+    +       "wcag412",
+    +       "section508",
+    +       "section508.22.n",
+    +       "TTv5",
+    +       "TT5.c",
+    +       "EN-301-549",
+    +       "EN-9.4.1.2",
+    +       "ACT",
+    +       "RGAAv4",
+    +       "RGAA-11.1.1",
+    +     ],
+    +   },
+    +   Object {
+    +     "description": "Ensure touch targets have sufficient size and space",
+    +     "help": "All touch targets must be 24px large, or leave sufficient space",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/target-size?application=playwright",
+    +     "id": "target-size",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "height": 19,
+    +               "minSize": 24,
+    +               "width": 91,
+    +             },
+    +             "id": "target-size",
+    +             "impact": "serious",
+    +             "message": "Target has insufficient size (91px by 19px, should be at least 24px by 24px)",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": Object {
+    +               "closestOffset": 19,
+    +               "minOffset": 24,
+    +             },
+    +             "id": "target-offset",
+    +             "impact": "serious",
+    +             "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19px instead of at least 24px.",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button class=\"btn-secondary py-1 px-3 text-xs\">Login / Sign up</button>",
+    +                 "target": Array [
+    +                   ".px-3",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Target has insufficient size (91px by 19px, should be at least 24px by 24px)
+    +   Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19px instead of at least 24px.",
+    +         "html": "<select class=\"bg-transparent border-none text-xs text-slate-300 outline-none font-semibold cursor-pointer\" aria-label=\"Website language\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".bg-transparent",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.sensory-and-visual-cues",
+    +       "wcag22aa",
+    +       "wcag258",
+    +     ],
+    +   },
+    + ]
+
+      13 |       .analyze();
+      14 |
+    > 15 |     expect(results.violations).toEqual([]);
+         |                                ^
+      16 |   });
+      17 |
+      18 |   test('Concierge view has no automatically detectable violations', async ({ page }) => {
+        at /home/runner/work/Challenge4H2S/Challenge4H2S/frontend/tests/a11y/axeAccessibility.spec.ts:15:32
+
+    Error Context: test-results/a11y-axeAccessibility-Acce-c467f-cally-detectable-violations-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -   1
+    + Received  + 686
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+    +     "help": "Elements must meet minimum color contrast ratio thresholds",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=playwright",
+    +     "id": "color-contrast",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0ea5e9",
+    +               "contrastRatio": 2.77,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#ffffff",
+    +               "fontSize": "10.5pt (14px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 2.77 (foreground color: #ffffff, background color: #0ea5e9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button class=\"view-btn active\" aria-pressed=\"true\">",
+    +                 "target": Array [
+    +                   ".view-btn.active",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 2.77 (foreground color: #ffffff, background color: #0ea5e9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<button class=\"view-btn active\" aria-pressed=\"true\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".view-btn.active",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1323",
+    +               "contrastRatio": 3.88,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"stat-chip\" title=\"Average crowd density\"><span class=\"stat-chip-dot\" style=\"background: rgb(16, 185, 129);\"></span><span class=\"stat-chip-label\">Crowd</span><span class=\"stat-chip-value\" style=\"color: rgb(16, 185, 129);\">Low</span></div>",
+    +                 "target": Array [
+    +                   "div[title=\"Average crowd density\"]",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"stat-chip-label\">Crowd</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div[title=\"Average crowd density\"] > .stat-chip-label",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1323",
+    +               "contrastRatio": 3.88,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"stat-chip\" title=\"Active alerts\">",
+    +                 "target": Array [
+    +                   "div[title=\"Active alerts\"]",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"stat-chip-label\">Alerts</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div[title=\"Active alerts\"] > .stat-chip-label",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1323",
+    +               "contrastRatio": 3.88,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"stat-chip\" title=\"Route distance\">",
+    +                 "target": Array [
+    +                   "div[title=\"Route distance\"]",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"stat-chip-label\">Distance</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div[title=\"Route distance\"] > .stat-chip-label",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1323",
+    +               "contrastRatio": 3.88,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"stat-chip\" title=\"Estimated walk time\">",
+    +                 "target": Array [
+    +                   "div[title=\"Estimated walk time\"]",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"stat-chip-label\">ETA</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div[title=\"Estimated walk time\"] > .stat-chip-label",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1321",
+    +               "contrastRatio": 3.89,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.89 (foreground color: #64748b, background color: #0d1321, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<article class=\"glass-panel flex flex-col gap-4\" aria-labelledby=\"find-my-way-title\">",
+    +                 "target": Array [
+    +                   "article",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.89 (foreground color: #64748b, background color: #0d1321, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<div class=\"switch-subtext\">Avoids stairs, prefers lifts and ramps</div>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".switch-subtext",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0e1627",
+    +               "contrastRatio": 3.79,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🚪 Gates</button>",
+    +                 "target": Array [
+    +                   ".category-tab[role=\"tab\"]:nth-child(2)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<article class=\"glass-panel flex flex-col gap-4\" aria-labelledby=\"find-my-way-title\">",
+    +                 "target": Array [
+    +                   "article",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🚪 Gates</button>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".category-tab[role=\"tab\"]:nth-child(2)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0e1627",
+    +               "contrastRatio": 3.79,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🪑 Seats</button>",
+    +                 "target": Array [
+    +                   ".category-tab[role=\"tab\"]:nth-child(3)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<article class=\"glass-panel flex flex-col gap-4\" aria-labelledby=\"find-my-way-title\">",
+    +                 "target": Array [
+    +                   "article",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🪑 Seats</button>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".category-tab[role=\"tab\"]:nth-child(3)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0e1627",
+    +               "contrastRatio": 3.79,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🏥 Facilities</button>",
+    +                 "target": Array [
+    +                   ".category-tab[role=\"tab\"]:nth-child(4)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<article class=\"glass-panel flex flex-col gap-4\" aria-labelledby=\"find-my-way-title\">",
+    +                 "target": Array [
+    +                   "article",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🏥 Facilities</button>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".category-tab[role=\"tab\"]:nth-child(4)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1c2d",
+    +               "contrastRatio": 3.61,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "7.5pt (10px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.61 (foreground color: #64748b, background color: #0d1c2d, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"route-summary-card\">",
+    +                 "target": Array [
+    +                   ".route-summary-card",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<div class=\"glass-panel\">",
+    +                 "target": Array [
+    +                   ".glass-panel:nth-child(3)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.61 (foreground color: #64748b, background color: #0d1c2d, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<div class=\"eta-bar-label\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".eta-bar-label",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#191f2c",
+    +               "contrastRatio": 3.46,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "7.5pt (10px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.46 (foreground color: #64748b, background color: #191f2c, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<span class=\"step-floor\">Ground Floor</span>",
+    +                 "target": Array [
+    +                   ".step-row:nth-child(1) > .step-content > .step-meta > .step-floor",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<div class=\"glass-panel\">",
+    +                 "target": Array [
+    +                   ".glass-panel:nth-child(3)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.46 (foreground color: #64748b, background color: #191f2c, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"step-floor\">Ground Floor</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".step-row:nth-child(1) > .step-content > .step-meta > .step-floor",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#191f2c",
+    +               "contrastRatio": 3.46,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "7.5pt (10px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.46 (foreground color: #64748b, background color: #191f2c, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<span class=\"step-floor\">Ground Floor</span>",
+    +                 "target": Array [
+    +                   ".step-row:nth-child(2) > .step-content > .step-meta > .step-floor",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<div class=\"glass-panel\">",
+    +                 "target": Array [
+    +                   ".glass-panel:nth-child(3)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.46 (foreground color: #64748b, background color: #191f2c, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"step-floor\">Ground Floor</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".step-row:nth-child(2) > .step-content > .step-meta > .step-floor",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.color",
+    +       "wcag2aa",
+    +       "wcag143",
+    +       "TTv5",
+    +       "TT13.c",
+    +       "EN-301-549",
+    +       "EN-9.1.4.3",
+    +       "ACT",
+    +       "RGAAv4",
+    +       "RGAA-3.2.1",
+    +     ],
+    +   },
+    +   Object {
+    +     "description": "Ensure select element has an accessible name",
+    +     "help": "Select element must have an accessible name",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/select-name?application=playwright",
+    +     "id": "select-name",
+    +     "impact": "critical",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "implicit-label",
+    +             "impact": "critical",
+    +             "message": "Element does not have an implicit (wrapped) <label>",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": null,
+    +             "id": "explicit-label",
+    +             "impact": "critical",
+    +             "message": "Element does not have an explicit <label>",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": null,
+    +             "id": "aria-label",
+    +             "impact": "critical",
+    +             "message": "aria-label attribute does not exist or is empty",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": null,
+    +             "id": "aria-labelledby",
+    +             "impact": "critical",
+    +             "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": Object {
+    +               "messageKey": "noAttr",
+    +             },
+    +             "id": "non-empty-title",
+    +             "impact": "critical",
+    +             "message": "Element has no title attribute",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": null,
+    +             "id": "presentational-role",
+    +             "impact": "critical",
+    +             "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element does not have an implicit (wrapped) <label>
+    +   Element does not have an explicit <label>
+    +   aria-label attribute does not exist or is empty
+    +   aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+    +   Element has no title attribute
+    +   Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+    +         "html": "<select class=\"form-select m-0\"><option value=\"gate_metlife\">MetLife Gate</option></select>",
+    +         "impact": "critical",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".form-select",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.forms",
+    +       "wcag2a",
+    +       "wcag412",
+    +       "section508",
+    +       "section508.22.n",
+    +       "TTv5",
+    +       "TT5.c",
+    +       "EN-301-549",
+    +       "EN-9.4.1.2",
+    +       "ACT",
+    +       "RGAAv4",
+    +       "RGAA-11.1.1",
+    +     ],
+    +   },
+    +   Object {
+    +     "description": "Ensure touch targets have sufficient size and space",
+    +     "help": "All touch targets must be 24px large, or leave sufficient space",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/target-size?application=playwright",
+    +     "id": "target-size",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "height": 19,
+    +               "minSize": 24,
+    +               "width": 91,
+    +             },
+    +             "id": "target-size",
+    +             "impact": "serious",
+    +             "message": "Target has insufficient size (91px by 19px, should be at least 24px by 24px)",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": Object {
+    +               "closestOffset": 19,
+    +               "minOffset": 24,
+    +             },
+    +             "id": "target-offset",
+    +             "impact": "serious",
+    +             "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19px instead of at least 24px.",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button class=\"btn-secondary py-1 px-3 text-xs\">Login / Sign up</button>",
+    +                 "target": Array [
+    +                   ".px-3",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Target has insufficient size (91px by 19px, should be at least 24px by 24px)
+    +   Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19px instead of at least 24px.",
+    +         "html": "<select class=\"bg-transparent border-none text-xs text-slate-300 outline-none font-semibold cursor-pointer\" aria-label=\"Website language\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".bg-transparent",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.sensory-and-visual-cues",
+    +       "wcag22aa",
+    +       "wcag258",
+    +     ],
+    +   },
+    + ]
+
+      13 |       .analyze();
+      14 |
+    > 15 |     expect(results.violations).toEqual([]);
+         |                                ^
+      16 |   });
+      17 |
+      18 |   test('Concierge view has no automatically detectable violations', async ({ page }) => {
+        at /home/runner/work/Challenge4H2S/Challenge4H2S/frontend/tests/a11y/axeAccessibility.spec.ts:15:32
+
+    Error Context: test-results/a11y-axeAccessibility-Acce-c467f-cally-detectable-violations-chromium-retry1/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a11y-axeAccessibility-Acce-c467f-cally-detectable-violations-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/a11y-axeAccessibility-Acce-c467f-cally-detectable-violations-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -   1
+    + Received  + 686
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+    +     "help": "Elements must meet minimum color contrast ratio thresholds",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=playwright",
+    +     "id": "color-contrast",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0ea5e9",
+    +               "contrastRatio": 2.77,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#ffffff",
+    +               "fontSize": "10.5pt (14px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 2.77 (foreground color: #ffffff, background color: #0ea5e9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button class=\"view-btn active\" aria-pressed=\"true\">",
+    +                 "target": Array [
+    +                   ".view-btn.active",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 2.77 (foreground color: #ffffff, background color: #0ea5e9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<button class=\"view-btn active\" aria-pressed=\"true\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".view-btn.active",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1323",
+    +               "contrastRatio": 3.88,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"stat-chip\" title=\"Average crowd density\"><span class=\"stat-chip-dot\" style=\"background: rgb(16, 185, 129);\"></span><span class=\"stat-chip-label\">Crowd</span><span class=\"stat-chip-value\" style=\"color: rgb(16, 185, 129);\">Low</span></div>",
+    +                 "target": Array [
+    +                   "div[title=\"Average crowd density\"]",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"stat-chip-label\">Crowd</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div[title=\"Average crowd density\"] > .stat-chip-label",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1323",
+    +               "contrastRatio": 3.88,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"stat-chip\" title=\"Active alerts\">",
+    +                 "target": Array [
+    +                   "div[title=\"Active alerts\"]",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"stat-chip-label\">Alerts</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div[title=\"Active alerts\"] > .stat-chip-label",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1323",
+    +               "contrastRatio": 3.88,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"stat-chip\" title=\"Route distance\">",
+    +                 "target": Array [
+    +                   "div[title=\"Route distance\"]",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"stat-chip-label\">Distance</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div[title=\"Route distance\"] > .stat-chip-label",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1323",
+    +               "contrastRatio": 3.88,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"stat-chip\" title=\"Estimated walk time\">",
+    +                 "target": Array [
+    +                   "div[title=\"Estimated walk time\"]",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.88 (foreground color: #64748b, background color: #0d1323, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"stat-chip-label\">ETA</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div[title=\"Estimated walk time\"] > .stat-chip-label",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1321",
+    +               "contrastRatio": 3.89,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.89 (foreground color: #64748b, background color: #0d1321, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<article class=\"glass-panel flex flex-col gap-4\" aria-labelledby=\"find-my-way-title\">",
+    +                 "target": Array [
+    +                   "article",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.89 (foreground color: #64748b, background color: #0d1321, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<div class=\"switch-subtext\">Avoids stairs, prefers lifts and ramps</div>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".switch-subtext",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0e1627",
+    +               "contrastRatio": 3.79,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🚪 Gates</button>",
+    +                 "target": Array [
+    +                   ".category-tab[role=\"tab\"]:nth-child(2)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<article class=\"glass-panel flex flex-col gap-4\" aria-labelledby=\"find-my-way-title\">",
+    +                 "target": Array [
+    +                   "article",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🚪 Gates</button>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".category-tab[role=\"tab\"]:nth-child(2)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0e1627",
+    +               "contrastRatio": 3.79,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🪑 Seats</button>",
+    +                 "target": Array [
+    +                   ".category-tab[role=\"tab\"]:nth-child(3)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<article class=\"glass-panel flex flex-col gap-4\" aria-labelledby=\"find-my-way-title\">",
+    +                 "target": Array [
+    +                   "article",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🪑 Seats</button>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".category-tab[role=\"tab\"]:nth-child(3)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0e1627",
+    +               "contrastRatio": 3.79,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "8.3pt (11px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🏥 Facilities</button>",
+    +                 "target": Array [
+    +                   ".category-tab[role=\"tab\"]:nth-child(4)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<article class=\"glass-panel flex flex-col gap-4\" aria-labelledby=\"find-my-way-title\">",
+    +                 "target": Array [
+    +                   "article",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.79 (foreground color: #64748b, background color: #0e1627, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<button role=\"tab\" aria-selected=\"false\" class=\"category-tab \">🏥 Facilities</button>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".category-tab[role=\"tab\"]:nth-child(4)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0d1c2d",
+    +               "contrastRatio": 3.61,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "7.5pt (10px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.61 (foreground color: #64748b, background color: #0d1c2d, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<div class=\"route-summary-card\">",
+    +                 "target": Array [
+    +                   ".route-summary-card",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<div class=\"glass-panel\">",
+    +                 "target": Array [
+    +                   ".glass-panel:nth-child(3)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.61 (foreground color: #64748b, background color: #0d1c2d, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<div class=\"eta-bar-label\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".eta-bar-label",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#191f2c",
+    +               "contrastRatio": 3.46,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "7.5pt (10px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.46 (foreground color: #64748b, background color: #191f2c, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<span class=\"step-floor\">Ground Floor</span>",
+    +                 "target": Array [
+    +                   ".step-row:nth-child(1) > .step-content > .step-meta > .step-floor",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<div class=\"glass-panel\">",
+    +                 "target": Array [
+    +                   ".glass-panel:nth-child(3)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.46 (foreground color: #64748b, background color: #191f2c, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"step-floor\">Ground Floor</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".step-row:nth-child(1) > .step-content > .step-meta > .step-floor",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#191f2c",
+    +               "contrastRatio": 3.46,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#64748b",
+    +               "fontSize": "7.5pt (10px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 3.46 (foreground color: #64748b, background color: #191f2c, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<span class=\"step-floor\">Ground Floor</span>",
+    +                 "target": Array [
+    +                   ".step-row:nth-child(2) > .step-content > .step-meta > .step-floor",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<div class=\"glass-panel\">",
+    +                 "target": Array [
+    +                   ".glass-panel:nth-child(3)",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 3.46 (foreground color: #64748b, background color: #191f2c, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<span class=\"step-floor\">Ground Floor</span>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".step-row:nth-child(2) > .step-content > .step-meta > .step-floor",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.color",
+    +       "wcag2aa",
+    +       "wcag143",
+    +       "TTv5",
+    +       "TT13.c",
+    +       "EN-301-549",
+    +       "EN-9.1.4.3",
+    +       "ACT",
+    +       "RGAAv4",
+    +       "RGAA-3.2.1",
+    +     ],
+    +   },
+    +   Object {
+    +     "description": "Ensure select element has an accessible name",
+    +     "help": "Select element must have an accessible name",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/select-name?application=playwright",
+    +     "id": "select-name",
+    +     "impact": "critical",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "implicit-label",
+    +             "impact": "critical",
+    +             "message": "Element does not have an implicit (wrapped) <label>",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": null,
+    +             "id": "explicit-label",
+    +             "impact": "critical",
+    +             "message": "Element does not have an explicit <label>",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": null,
+    +             "id": "aria-label",
+    +             "impact": "critical",
+    +             "message": "aria-label attribute does not exist or is empty",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": null,
+    +             "id": "aria-labelledby",
+    +             "impact": "critical",
+    +             "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": Object {
+    +               "messageKey": "noAttr",
+    +             },
+    +             "id": "non-empty-title",
+    +             "impact": "critical",
+    +             "message": "Element has no title attribute",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": null,
+    +             "id": "presentational-role",
+    +             "impact": "critical",
+    +             "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element does not have an implicit (wrapped) <label>
+    +   Element does not have an explicit <label>
+    +   aria-label attribute does not exist or is empty
+    +   aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+    +   Element has no title attribute
+    +   Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+    +         "html": "<select class=\"form-select m-0\"><option value=\"gate_metlife\">MetLife Gate</option></select>",
+    +         "impact": "critical",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".form-select",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.forms",
+    +       "wcag2a",
+    +       "wcag412",
+    +       "section508",
+    +       "section508.22.n",
+    +       "TTv5",
+    +       "TT5.c",
+    +       "EN-301-549",
+    +       "EN-9.4.1.2",
+    +       "ACT",
+    +       "RGAAv4",
+    +       "RGAA-11.1.1",
+    +     ],
+    +   },
+    +   Object {
+    +     "description": "Ensure touch targets have sufficient size and space",
+    +     "help": "All touch targets must be 24px large, or leave sufficient space",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/target-size?application=playwright",
+    +     "id": "target-size",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "height": 19,
+    +               "minSize": 24,
+    +               "width": 91,
+    +             },
+    +             "id": "target-size",
+    +             "impact": "serious",
+    +             "message": "Target has insufficient size (91px by 19px, should be at least 24px by 24px)",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": Object {
+    +               "closestOffset": 19,
+    +               "minOffset": 24,
+    +             },
+    +             "id": "target-offset",
+    +             "impact": "serious",
+    +             "message": "Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19px instead of at least 24px.",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button class=\"btn-secondary py-1 px-3 text-xs\">Login / Sign up</button>",
+    +                 "target": Array [
+    +                   ".px-3",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Target has insufficient size (91px by 19px, should be at least 24px by 24px)
+    +   Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 19px instead of at least 24px.",
+    +         "html": "<select class=\"bg-transparent border-none text-xs text-slate-300 outline-none font-semibold cursor-pointer\" aria-label=\"Website language\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".bg-transparent",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.sensory-and-visual-cues",
+    +       "wcag22aa",
+    +       "wcag258",
+    +     ],
+    +   },
+    + ]
+
+      13 |       .analyze();
+      14 |
+    > 15 |     expect(results.violations).toEqual([]);
+         |                                ^
+      16 |   });
+      17 |
+      18 |   test('Concierge view has no automatically detectable violations', async ({ page }) => {
+        at /home/runner/work/Challenge4H2S/Challenge4H2S/frontend/tests/a11y/axeAccessibility.spec.ts:15:32
+
+    Error Context: test-results/a11y-axeAccessibility-Acce-c467f-cally-detectable-violations-chromium-retry2/error-context.md
+
+  2) [chromium] › tests/a11y/axeAccessibility.spec.ts:18:3 › Accessibility (WCAG 2.2 AA) › Concierge view has no automatically detectable violations 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 82
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+    +     "help": "Elements must meet minimum color contrast ratio thresholds",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=playwright",
+    +     "id": "color-contrast",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0ea5e8",
+    +               "contrastRatio": 2.77,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#ffffff",
+    +               "fontSize": "10.5pt (14px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 2.77 (foreground color: #ffffff, background color: #0ea5e8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button class=\"view-btn active\" aria-pressed=\"true\">",
+    +                 "target": Array [
+    +                   ".active",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<nav class=\"view-switcher\" aria-label=\"Main Navigation\">",
+    +                 "target": Array [
+    +                   "nav",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<header class=\"header-bar\">",
+    +                 "target": Array [
+    +                   "header",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<div class=\"glass-panel flex flex-col h-full overflow-hidden\">",
+    +                 "target": Array [
+    +                   ".glass-panel",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 2.77 (foreground color: #ffffff, background color: #0ea5e8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<button class=\"view-btn active\" aria-pressed=\"true\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".active",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.color",
+    +       "wcag2aa",
+    +       "wcag143",
+    +       "TTv5",
+    +       "TT13.c",
+    +       "EN-301-549",
+    +       "EN-9.1.4.3",
+    +       "ACT",
+    +       "RGAAv4",
+    +       "RGAA-3.2.1",
+    +     ],
+    +   },
+    + ]
+
+      22 |
+      23 |     const results = await new AxeBuilder({ page }).withTags(['wcag2aa']).analyze();
+    > 24 |     expect(results.violations).toEqual([]);
+         |                                ^
+      25 |   });
+      26 | });
+      27 |
+        at /home/runner/work/Challenge4H2S/Challenge4H2S/frontend/tests/a11y/axeAccessibility.spec.ts:24:32
+
+    Error Context: test-results/a11y-axeAccessibility-Acce-b0df3-cally-detectable-violations-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 58
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+    +     "help": "Elements must meet minimum color contrast ratio thresholds",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=playwright",
+    +     "id": "color-contrast",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0ea5e9",
+    +               "contrastRatio": 2.77,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#ffffff",
+    +               "fontSize": "10.5pt (14px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 2.77 (foreground color: #ffffff, background color: #0ea5e9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button class=\"view-btn active\" aria-pressed=\"true\">",
+    +                 "target": Array [
+    +                   ".active",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 2.77 (foreground color: #ffffff, background color: #0ea5e9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<button class=\"view-btn active\" aria-pressed=\"true\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".active",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.color",
+    +       "wcag2aa",
+    +       "wcag143",
+    +       "TTv5",
+    +       "TT13.c",
+    +       "EN-301-549",
+    +       "EN-9.1.4.3",
+    +       "ACT",
+    +       "RGAAv4",
+    +       "RGAA-3.2.1",
+    +     ],
+    +   },
+    + ]
+
+      22 |
+      23 |     const results = await new AxeBuilder({ page }).withTags(['wcag2aa']).analyze();
+    > 24 |     expect(results.violations).toEqual([]);
+         |                                ^
+      25 |   });
+      26 | });
+      27 |
+        at /home/runner/work/Challenge4H2S/Challenge4H2S/frontend/tests/a11y/axeAccessibility.spec.ts:24:32
+
+    Error Context: test-results/a11y-axeAccessibility-Acce-b0df3-cally-detectable-violations-chromium-retry1/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a11y-axeAccessibility-Acce-b0df3-cally-detectable-violations-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/a11y-axeAccessibility-Acce-b0df3-cally-detectable-violations-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 82
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+    +     "help": "Elements must meet minimum color contrast ratio thresholds",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=playwright",
+    +     "id": "color-contrast",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": Object {
+    +               "bgColor": "#0ea5e8",
+    +               "contrastRatio": 2.77,
+    +               "expectedContrastRatio": "4.5:1",
+    +               "fgColor": "#ffffff",
+    +               "fontSize": "10.5pt (14px)",
+    +               "fontWeight": "normal",
+    +               "messageKey": null,
+    +             },
+    +             "id": "color-contrast",
+    +             "impact": "serious",
+    +             "message": "Element has insufficient color contrast of 2.77 (foreground color: #ffffff, background color: #0ea5e8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +             "relatedNodes": Array [
+    +               Object {
+    +                 "html": "<button class=\"view-btn active\" aria-pressed=\"true\">",
+    +                 "target": Array [
+    +                   ".active",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<nav class=\"view-switcher\" aria-label=\"Main Navigation\">",
+    +                 "target": Array [
+    +                   "nav",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<header class=\"header-bar\">",
+    +                 "target": Array [
+    +                   "header",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<div class=\"glass-panel flex flex-col h-full overflow-hidden\">",
+    +                 "target": Array [
+    +                   ".glass-panel",
+    +                 ],
+    +               },
+    +               Object {
+    +                 "html": "<body>",
+    +                 "target": Array [
+    +                   "body",
+    +                 ],
+    +               },
+    +             ],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Element has insufficient color contrast of 2.77 (foreground color: #ffffff, background color: #0ea5e8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+    +         "html": "<button class=\"view-btn active\" aria-pressed=\"true\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".active",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.color",
+    +       "wcag2aa",
+    +       "wcag143",
+    +       "TTv5",
+    +       "TT13.c",
+    +       "EN-301-549",
+    +       "EN-9.1.4.3",
+    +       "ACT",
+    +       "RGAAv4",
+    +       "RGAA-3.2.1",
+    +     ],
+    +   },
+    + ]
+
+      22 |
+      23 |     const results = await new AxeBuilder({ page }).withTags(['wcag2aa']).analyze();
+    > 24 |     expect(results.violations).toEqual([]);
+         |                                ^
+      25 |   });
+      26 | });
+      27 |
+        at /home/runner/work/Challenge4H2S/Challenge4H2S/frontend/tests/a11y/axeAccessibility.spec.ts:24:32
+
+    Error Context: test-results/a11y-axeAccessibility-Acce-b0df3-cally-detectable-violations-chromium-retry2/error-context.md
+
+  2 failed
+    [chromium] › tests/a11y/axeAccessibility.spec.ts:6:3 › Accessibility (WCAG 2.2 AA) › Fan Portal has no automatically detectable violations 
+    [chromium] › tests/a11y/axeAccessibility.spec.ts:18:3 › Accessibility (WCAG 2.2 AA) › Concierge view has no automatically detectable violations 
+  3 passed (20.2s)
+npm error Lifecycle script `test:e2e` failed with error:
+npm error code 1
+npm error path /home/runner/work/Challenge4H2S/Challenge4H2S/frontend
+npm error workspace frontend@0.0.0
+npm error location /home/runner/work/Challenge4H2S/Challenge4H2S/frontend
+npm error command failed
+npm error command sh -c playwright test

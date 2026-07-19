@@ -473,9 +473,9 @@ function StadiumApp() {
         </nav>
 
         <div className="flex items-center gap-3 text-xs text-slate-400 font-medium">
-          <label className="flex items-center gap-1.5 bg-slate-950/60 border border-slate-800 px-2 py-1 rounded-lg" title="Website language">
+          <label className="flex items-center gap-1.5 bg-slate-950/60 border border-slate-800 px-2 py-1.5 rounded-lg min-h-[24px]" title="Website language">
             <Languages size={13} className="text-slate-400" aria-hidden="true" />
-            <select value={language} onChange={event => setLanguage(event.target.value)} className="bg-transparent border-none text-xs text-slate-300 outline-none font-semibold cursor-pointer" aria-label="Website language">
+            <select value={language} onChange={event => setLanguage(event.target.value)} className="bg-transparent border-none text-xs text-slate-300 outline-none font-semibold cursor-pointer min-h-[24px]" style={{ minHeight: '24px' }} aria-label="Website language">
               {LANGUAGES.map(item => <option key={item.code} value={item.code} className="bg-slate-900">{item.label}</option>)}
             </select>
           </label>

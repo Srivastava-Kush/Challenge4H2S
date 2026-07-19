@@ -233,6 +233,7 @@ export const FanPortal: React.FC<FanPortalProps> = ({
             value={startNodeId}
             onChange={e => onChangeStartNode(e.target.value)}
             className="form-select m-0"
+            aria-label="Starting location"
           >
             {gates.map(g => (
               <option key={g.id} value={g.id}>{g.name}</option>
