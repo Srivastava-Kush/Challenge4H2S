@@ -9,8 +9,8 @@
  * Fully open-source and serverless. Uses native fetch for zero dependencies.
  */
 
-const getHfToken      = () => process.env.HF_TOKEN || '';
-const CHAT_MODEL      = process.env.CHAT_MODEL      || 'Qwen/Qwen2.5-72B-Instruct';
+const getHfToken = () => process.env.HF_TOKEN;
+const CHAT_MODEL = process.env.CHAT_MODEL || 'Qwen/Qwen2.5-72B-Instruct';
 const EMBEDDING_MODEL = process.env.EMBEDDING_MODEL || 'BAAI/bge-base-en-v1.5';
 
 if (!process.env.HF_TOKEN) {
@@ -179,8 +179,8 @@ export async function generateResponse({ message, ragChunks, ragSources, routing
     : 'Retrieved Knowledge: None found.';
 
   const toolSection = [
-    routingOutput  ? `Routing Tool Output:\n${routingOutput}`  : null,
-    crowdOutput    ? `Crowd Tool Output:\n${crowdOutput}`       : null,
+    routingOutput ? `Routing Tool Output:\n${routingOutput}` : null,
+    crowdOutput ? `Crowd Tool Output:\n${crowdOutput}` : null,
     facilityOutput ? `Facility Tool Output:\n${facilityOutput}` : null,
   ].filter(Boolean).join('\n\n') || 'Tool Outputs: None invoked.';
 
