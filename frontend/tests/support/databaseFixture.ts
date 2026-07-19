@@ -46,13 +46,29 @@ export const databaseMap = {
   },
 };
 
+
+
+
 export async function openDatabaseBackedFanApp(page: Page) {
   await page.route('**/api/map', route => route.fulfill({ json: databaseMap }));
   await page.goto('/');
 
+  // Wait for the button to be visible and enabled before clicking
   const exploreButton = page.getByRole('button', { name: /Explore the stadium/i });
   await exploreButton.waitFor({ state: 'visible' });
   await exploreButton.click();
 
-  await page.locator('svg.map-svg').waitFor({ state: 'visible' });
+  await page.locator('svg.map-svg').waitFor();
 }
+
+// export async function openDatabaseBackedFanApp(page: Page) {
+//   await page.route('**/api/map', route => route.fulfill({ json: databaseMap }));
+//   await page.goto('/');
+
+//   const exploreButton = page.getByRole('button', { name: /Explore the stadium/i });
+//   await exploreButton.waitFor({ state: 'visible' });
+//   await exploreButton.click();
+
+//   await page.locator('svg.map-svg').waitFor({ state: 'visible' });
+// }
+
